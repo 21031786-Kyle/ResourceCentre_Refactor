@@ -18,20 +18,20 @@ public class ResourceCentre {
 		chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
 		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
 
-		int option = 0;
+		int Option = 0;
 
-		while (option != OPTION_QUIT) {
+		while (Option != OPTION_QUIT) {
 
 			
 			ResourceCentre.menu();
-			option = Helper.readInt("Enter an option > ");
+			Option = Helper.readInt("Enter an option > ");
 
-			if (option == OPTION_VIEW) {
+			if (Option == OPTION_VIEW) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == OPTION_ADD) {
+			} else if (Option == OPTION_ADD) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");
 				itemTypeMenu();
@@ -54,7 +54,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == OPTION_LOAN) {
+			} else if (Option == OPTION_LOAN) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");
 				itemTypeMenu();
@@ -71,7 +71,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == OPTION_RETURN) {
+			} else if (Option == OPTION_RETURN) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");
 				itemTypeMenu();
@@ -87,7 +87,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == OPTION_QUIT) {
+			} else if (Option == OPTION_QUIT) {
 				System.out.println("Bye!");
 			} else {
 				System.out.println("Invalid option");
